@@ -239,7 +239,7 @@ def domain_word():
     return re.sub(r'\W+', '', company().lower())
 
 def domain_name():
-    return 'www.%s.%s' % (domain_word(), domain_suffix())
+    return '%s.%s' % (domain_word(), domain_suffix())
 
 def email():
     return '%s@%s' % (username(), domain_name())
